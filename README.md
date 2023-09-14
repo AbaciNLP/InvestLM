@@ -48,11 +48,11 @@ python inference.py \
 # Generation Examples
 ## Investment Advice
 **Instruction:**
-Leading the percentage decliners list this morning is HEICO Corp. (HEI - $9.42 to $158.43) after the provider of aerospace & defense components reported Q3 earnings of $0.74 per share ($0.01 beat) on revenue that rose 26.9% year-over-year to $722.9M (above the $701.55M expected). The stock may be trading lower today due to Q3 adjusted EBITDA ($179.8M vs. the $181.7M expected) and Q3 operating margin (20.7% vs. 22.6% expected). Calls are outnumbering puts ~2:1 with the September 15th 180.00 call seeing the most action from traders (volume is 136).
+The railroad company saw earnings roll a bit off track when it reported July 20. The company slightly missed analysts’ revenue expectations and reported earnings per share (EPS) that matched Wall Street’s estimates. That EPS performance might be fine for many companies, but it rang warning bells for CSX investors because it was the first time in five years that CSX failed to surpass EPS estimates. The company saw declining volume in a number of key products it transports, including agricultural and food, chemicals, and forest. Volume growth in coal provided some locomotion. Intermodal, which means using two transport modes to move freight (which often means converting freight from highway to intermodal rail), continued to struggle in the latest quarter. Railroads have grappled with worker shortages and supply chain issues. The latest CSX earnings raises questions about overall U.S. economic health. 
 
-Can you suggest a trading strategy based on this news?
+Given the recent performance of the railroad company, is it advisable to buy, hold, or sell stocks in the sector?
 
-**Response:** Based on the information you provided, I would consider executing a bear put spread on HEI stock. Since I'm bearish on HEI based on the earnings miss, I would buy a put with a lower strike price and simultaneously sell a put at a higher strike price to offset some of the cost of the position. This strategy will profit if HEI stock continues to fall through the lower strike price. The strategy will begin to lose value if HEI stock rallies above the higher strike price.
+**Response:** Based on the information provided, the stock performance appears to be mixed. While revenue missed expectations, EPS met estimates, and coal volume provided some growth. On the other hand, declining volume in key product categories along with ongoing labor shortages and supply chain issues raise concerns. Overall, the outlook seems uncertain. As a result, a "hold" recommendation may be more appropriate than an outright "buy" or "sell" at this time. Investors should continue to monitor the economic indicators and company fundamentals before making an investment decision.
 ## Earnings transcript summarization
 **Instruction:**
 Please give the bullet point summarization of the following long earnings call transcripts.   
