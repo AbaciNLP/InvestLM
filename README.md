@@ -2,7 +2,7 @@
 ---
 # InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning
 
-This is the repo for the new financial domain large language model, **InvestLM**, tuned on LLaMA-65B[1], using a carefully curated instruction dataset related to financial investment. We provide guidance on how to use InvestLM for inference.
+This is the repo for a new financial domain large language model, **InvestLM**, tuned on LLaMA-65B[1], using a carefully curated instruction dataset related to financial investment. We provide guidance on how to use InvestLM for inference.
 
 # Overview
 
@@ -17,7 +17,7 @@ This repo contains:
 
 We use the Low-rank adaptation (LoRa) method [3] to tune LLaMA-65B's parameters in order to enhance the training efficiency. 
 
-[The Lora parameters for InvestLM]([InvestLM-65b-ins](https://gohkust-my.sharepoint.com/:f:/g/personal/imyiyang_ust_hk/EkzSzd6oJ9JNj7rLZPh7178BUxvcpNCmqOnvFWOiIu7xCw?e=XhUGdG))
+[The Lora parameters for InvestLM](https://gohkust-my.sharepoint.com/:f:/g/personal/imyiyang_ust_hk/EkzSzd6oJ9JNj7rLZPh7178BUxvcpNCmqOnvFWOiIu7xCw?e=XhUGdG)
 
 You also need to download [LLaMA-65B parameters](https://huggingface.co/Neko-Institute-of-Science/LLaMA-65B-HF). 
 
@@ -67,19 +67,8 @@ InvestLM adopts the same licensing terms as LLaMA, which is a noncommercial lice
 
 Please cite the repo if you use it in your research.
 
-```
-@misc{alpaca,
-  author = {Rohan Taori and Ishaan Gulrajani and Tianyi Zhang and Yann Dubois and Xuechen Li and Carlos Guestrin and Percy Liang and Tatsunori B. Hashimoto },
-  title = {Stanford Alpaca: An Instruction-following LLaMA model},
-  year = {2023},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/tatsu-lab/stanford_alpaca}},
-}
-```
-
 # Contact
-Please contact [imyiyang@ust.hk](imyiyang@ust.hk) if you have any questions
+Please post a Github issue or contact [imyiyang@ust.hk](imyiyang@ust.hk) if you have any questions.
 
 # References
 [1] Touvron, Hugo, et al. "Llama: Open and efficient foundation language models." *arXiv preprint arXiv:2302.13971* (2023).
