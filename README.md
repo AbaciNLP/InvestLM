@@ -1,43 +1,33 @@
 ![r.jpg](https://x.imgs.ovh/x/2023/09/14/6502da25e646d.jpg)
 ---
+# InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning
+
 This is the repo for the new financial domain large language model, **InvestLM**, tuned on LLaMA-65B[1], using a carefully curated instruction dataset related to financial investment. We provide guidance on how to use InvestLM for inference.
 
 # Overview
 
 Inspired by less-is-more-for-alignment (LIMA)[2], we manually curate a small yet diverse instruction dataset, covering a wide range of financial related topics, from Chartered Financial Analyst (CFA) exam questions to SEC filings to Stackexchange quantitative finance discussions. InvestLM shows strong capabilities in understanding financial text and provides helpful responses to investment related questions.
 
-# Training Format
-**Prompt with input:**
-```
-Below is an instruction that describes a task, paired with further context. 
-Write a response that appropriately completes the request.
+This repo contains:
 
-Instruction:
-{instruction}
+- The download link for InvestLM's parameters
+- The code for interacting with InvestLM
 
-Input:
-{input}
+# InvestLM parameters
 
-Response:
-```
+We use the Low-rank adaptation (LoRa) method [3] to tune LLaMA-65B's parameters in order to enhance the training efficiency. 
 
-**Prompt without input:**
-```
-Below is an instruction that describes a task, paired with further context. 
-Write a response that appropriately completes the request.
+[The Lora parameters for InvestLM]([InvestLM-65b-ins](https://gohkust-my.sharepoint.com/:f:/g/personal/imyiyang_ust_hk/EkzSzd6oJ9JNj7rLZPh7178BUxvcpNCmqOnvFWOiIu7xCw?e=XhUGdG))
 
-Instruction:
-{instruction}
-
-Response:
-```
+You also need to download [LLaMA-65B parameters](https://huggingface.co/Neko-Institute-of-Science/LLaMA-65B-HF). 
 
 # Inference 
+
 First, please install the required packages.
 ```
 pip install -r requirements.txt
 ```
-Then, run inference.py.
+Then, run inference.py. You need to provide the path to the downloaded Lora parameters and LLaMA-65B parameters.
 
 ```
 python inference.py \
@@ -45,7 +35,7 @@ python inference.py \
     --lora_weights ""
 ```
 
-# Generation Examples
+# Examples of InvestLM's Responses
 ## Investment Advice
 **Instruction:**
 The railroad company saw earnings roll a bit off track when it reported July 20. The company slightly missed analysts’ revenue expectations and reported earnings per share (EPS) that matched Wall Street’s estimates. That EPS performance might be fine for many companies, but it rang warning bells for CSX investors because it was the first time in five years that CSX failed to surpass EPS estimates. The company saw declining volume in a number of key products it transports, including agricultural and food, chemicals, and forest. Volume growth in coal provided some locomotion. Intermodal, which means using two transport modes to move freight (which often means converting freight from highway to intermodal rail), continued to struggle in the latest quarter. Railroads have grappled with worker shortages and supply chain issues. The latest CSX earnings raises questions about overall U.S. economic health. 
@@ -53,6 +43,7 @@ The railroad company saw earnings roll a bit off track when it reported July 20.
 Given the recent performance of the railroad company, is it advisable to buy, hold, or sell stocks in the sector?
 
 **Response:** Based on the information provided, the stock performance appears to be mixed. While revenue missed expectations, EPS met estimates, and coal volume provided some growth. On the other hand, declining volume in key product categories along with ongoing labor shortages and supply chain issues raise concerns. Overall, the outlook seems uncertain. As a result, a "hold" recommendation may be more appropriate than an outright "buy" or "sell" at this time. Investors should continue to monitor the economic indicators and company fundamentals before making an investment decision.
+
 ## Earnings transcript summarization
 **Instruction:**
 Please give the bullet point summarization of the following long earnings call transcripts.   
@@ -67,10 +58,32 @@ Q3 2021 Revenue increased 91.3% YoY to $225.3 million. Operating profit was $8 m
 
 
 # Ethics Statement
-It is essential to recognize that the responses from InvestLM  should not be construed as definitive investment advice. All investment strategies and decisions should be made after careful consideration of one's financial situation, risk tolerance, and investment goals. We strongly advocate for potential investors to consult with professional financial advisors and consider multiple information sources before making any investment decisions. Relying solely on InvestLM 's outputs without thorough due diligence can lead to unintended financial consequences. Thorough analyses should be conducted to understand the strengths and weaknesses of InvestLM .
+It is essential to recognize that the responses from InvestLM  should not be construed as definitive investment advice. All investment strategies and decisions should be made after careful consideration of one's financial situation, risk tolerance, and investment goals. We strongly advocate for potential investors to consult with professional financial advisors and consider multiple information sources before making any investment decisions. Relying solely on InvestLM 's outputs without thorough due diligence can lead to unintended financial consequences. Thorough analyses should be conducted to understand the strengths and weaknesses of InvestLM.
 
+# License
+InvestLM adopts the same licensing terms as LLaMA, which is a noncommercial license for research only.
+
+# Citation
+
+Please cite the repo if you use it in your research.
+
+```
+@misc{alpaca,
+  author = {Rohan Taori and Ishaan Gulrajani and Tianyi Zhang and Yann Dubois and Xuechen Li and Carlos Guestrin and Percy Liang and Tatsunori B. Hashimoto },
+  title = {Stanford Alpaca: An Instruction-following LLaMA model},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/tatsu-lab/stanford_alpaca}},
+}
+```
+
+# Contact
+Please contact [imyiyang@ust.hk](imyiyang@ust.hk) if you have any questions
 
 # References
-[1]: LLaMA: Open and Efficient Foundation Language Models. Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample. https://arxiv.org/abs/2302.13971v1
+[1] Touvron, Hugo, et al. "Llama: Open and efficient foundation language models." *arXiv preprint arXiv:2302.13971* (2023).
 
-[2]: LIMA: Less Is More for Alignment. Chunting Zhou, Pengfei Liu, Puxin Xu, Srini Iyer, Jiao Sun, Yuning Mao, Xuezhe Ma, Avia Efrat, Ping Yu, Lili Yu, Susan Zhang, Gargi Ghosh, Mike Lewis, Luke Zettlemoyer, Omer Levy. https://arxiv.org/abs/2305.11206
+[2] Zhou, Chunting, et al. "Lima: Less is more for alignment." *arXiv preprint arXiv:2305.11206* (2023).
+
+[3] Hu, Edward J., et al. "Lora: Low-rank adaptation of large language models." *arXiv preprint arXiv:2106.09685* (2021).
