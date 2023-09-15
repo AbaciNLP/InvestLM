@@ -17,9 +17,7 @@ This repo contains:
 
 We use the Low-rank adaptation (LoRa) method [3] to tune LLaMA-65B's parameters in order to enhance the training efficiency. 
 
-[The Lora parameters for InvestLM](https://gohkust-my.sharepoint.com/:f:/g/personal/imyiyang_ust_hk/EkzSzd6oJ9JNj7rLZPh7178BUxvcpNCmqOnvFWOiIu7xCw?e=XhUGdG)
-
-You also need to download [LLaMA-65B parameters](https://huggingface.co/Neko-Institute-of-Science/LLaMA-65B-HF). 
+[The Lora weights for InvestLM](https://gohkust-my.sharepoint.com/:f:/g/personal/imyiyang_ust_hk/EkzSzd6oJ9JNj7rLZPh7178BUxvcpNCmqOnvFWOiIu7xCw?e=XhUGdG)
 
 # Inference 
 
@@ -27,11 +25,11 @@ First, please install the required packages.
 ```
 pip install -r requirements.txt
 ```
-Then, run inference.py. You need to provide the path to the downloaded Lora parameters and LLaMA-65B parameters.
+Then, run inference.py. You need to provide the path to the downloaded Lora parameters. The code will automatically load LLaMA-65B parameters from Huggingface. 
 
 ```
 python inference.py \
-    --base_model "" \
+    --base_model "Neko-Institute-of-Science/LLaMA-65B-HF" \
     --lora_weights ""
 ```
 
