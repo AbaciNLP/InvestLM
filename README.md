@@ -4,6 +4,8 @@
 
 This is the repo for a new financial domain large language model, **InvestLM**, tuned on LLaMA-65B[1], using a carefully curated instruction dataset related to financial investment. We provide guidance on how to use InvestLM for inference.
 
+[Paper link](https://arxiv.org/abs/2309.13064)
+
 # Overview
 
 Inspired by less-is-more-for-alignment (LIMA)[2], we manually curate a small yet diverse instruction dataset, covering a wide range of financial related topics, from Chartered Financial Analyst (CFA) exam questions to SEC filings to Stackexchange quantitative finance discussions. InvestLM shows strong capabilities in understanding financial text and provides helpful responses to investment related questions.
@@ -64,14 +66,15 @@ InvestLM adopts the same licensing terms as LLaMA, which is a noncommercial lice
 # Citation
 
 Please cite the repo if you use it in your research.
-@misc{yang2023investlm,
-      title={InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning}, 
-      author={Yi Yang and Yixuan Tang and Kar Yan Tam},
-      year={2023},
-      eprint={2309.13064},
-      archivePrefix={arXiv},
-      primaryClass={q-fin.GN}
-}
+
+    @misc{yang2023investlm,
+          title={InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning}, 
+          author={Yi Yang and Yixuan Tang and Kar Yan Tam},
+          year={2023},
+          eprint={2309.13064},
+          archivePrefix={arXiv},
+          primaryClass={q-fin.GN}
+    }
 
 # Contact
 Please post a Github issue or contact [imyiyang@ust.hk](imyiyang@ust.hk) if you have any questions.
