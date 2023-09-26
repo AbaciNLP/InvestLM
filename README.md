@@ -64,6 +64,14 @@ InvestLM adopts the same licensing terms as LLaMA, which is a noncommercial lice
 # Citation
 
 Please cite the repo if you use it in your research.
+@misc{yang2023investlm,
+      title={InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning}, 
+      author={Yi Yang and Yixuan Tang and Kar Yan Tam},
+      year={2023},
+      eprint={2309.13064},
+      archivePrefix={arXiv},
+      primaryClass={q-fin.GN}
+}
 
 # Contact
 Please post a Github issue or contact [imyiyang@ust.hk](imyiyang@ust.hk) if you have any questions.
