@@ -1,4 +1,4 @@
-![r.jpg](https://x.imgs.ovh/x/2023/09/14/6502da25e646d.jpg)
+![r.jpg](resource/logo.jpeg)
 ---
 # InvestLM: A Large Language Model for Investment using Financial Domain Instruction Tuning
 
